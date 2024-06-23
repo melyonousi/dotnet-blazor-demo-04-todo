@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "6U2WsD1rHlnE6dFxrhGiUoUAyzGCBABaPRHKvbyznPKFro8/2zqKiMyw+F6m7k2Bx1wTZIBIeUYUiCMMRdWw6A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\melyo\\Documents\\github\\melyonousi\\blazor\\todoList\\todoList.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\melyo\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.1\\microsoft.netcore.app.ref.8.0.1.nupkg.sha512",
+    "C:\\Users\\melyo\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.1\\microsoft.windowsdesktop.app.ref.8.0.1.nupkg.sha512",
+    "C:\\Users\\melyo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.1\\microsoft.aspnetcore.app.ref.8.0.1.nupkg.sha512",
+    "C:\\Users\\melyo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.1\\microsoft.netcore.app.host.win-x64.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

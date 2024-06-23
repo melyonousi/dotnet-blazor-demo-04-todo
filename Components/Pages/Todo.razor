@@ -1,0 +1,46 @@
+﻿@page "/todo"
+@rendermode InteractiveServer
+
+<PageTitle>Todo-List | Todo</PageTitle>
+
+<div class="w-25 mx-auto mt-4">
+    <div class="w-100">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="describe your todo" aria-label="describe your todo"
+                aria-describedby="button-addon2" @bind="newTodo">
+            <button class="btn btn-secondary" type="button" id="button-addon2" @onclick="AddTodo">Add Todo</button>
+        </div>
+    </div>
+
+    <h3>Todos (@todos.Count(todo => !todo.IsDone))</h3>
+    <ul>
+        @foreach (var todo in todos)
+        {
+            <li class="w-100">
+                <div class="input-group mb-3 position-relative">
+                    <div class="position-absolute @(todo.IsDone ? "d-flex" : "d-none")" style="inset: 50% 0;width: 100%;height: 1px;background-color: black; z-index: 4;"></div>
+                    <div class="input-group-text">
+                        <input class="form-check-input mt-0" type="checkbox" value=""
+                            aria-label="Checkbox for following text input" @bind="todo.IsDone">
+                    </div>
+                    <input type="text" class="form-control" aria-label="Text input with checkbox" @bind="todo.Title">
+                </div>
+            </li>
+        }
+    </ul>
+</div>
+
+
+@code {
+    private List<TodoItem> todos = new();
+    string newTodo = "";
+
+    void AddTodo()
+    {
+        if (!string.IsNullOrWhiteSpace(newTodo))
+        {
+            todos.Add(new TodoItem { Title = newTodo });
+            newTodo = string.Empty;
+        }
+    }
+}
